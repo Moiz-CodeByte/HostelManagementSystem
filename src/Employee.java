@@ -38,7 +38,7 @@ public class Employee extends Person {
         System.out.println("Enter Address  [String type  'line' allowed] :");
         String Address = sc.nextLine();
 
-        System.out.println("Enter Role [string type 'word' allowed] :");
+        System.out.println("Enter Role [string type 'one word' allowed] :");
         String Role = sc.nextLine();
 
         System.out.println("Enter Joining date  Format [DDMMYYYY] :");
@@ -89,18 +89,22 @@ public class Employee extends Person {
     public void updateEmploye() {
         System.out.println("Enter the CNIC ID number of the Employee to update:");
          long ID = sc.nextLong();
+        sc.nextLine();
         for (int i = 0; i < Employeecount; i++) {
             if (EmployeeList[i].getID() == ID) {
                 System.out.println("Enter new Role for " + EmployeeList[i].getname() + ":");
                 String newRole  = sc.nextLine();
+                sc.nextLine();
                 EmployeeList[i].setRole(newRole);
 
                 System.out.println("Enter new Salary for " + EmployeeList[i].getname() + ":");
                 double newSalary = sc.nextDouble();
+                sc.nextLine();
                 EmployeeList[i].setSalary(newSalary);
 
                 System.out.println("Enter new Phone Number for " + EmployeeList[i].getname() + ":");
                 long newPhoneNo = sc.nextLong();
+                sc.nextLine();
                 EmployeeList[i].setPhoneNo(newPhoneNo);
 
 
