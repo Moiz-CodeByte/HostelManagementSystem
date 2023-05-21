@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class HostelManagementSystem {
 
     Student student = new Student();
@@ -9,9 +9,9 @@ public class HostelManagementSystem {
 
     public void login() {
 
-        System.out.println("\t\t\t\t\t\t\t\t\t\tEnter your username.");
+        System.out.println("\t\t\t\t\t\t\t\t\t\tEnter your Username.");
         String inputUsername = sc.next();
-        System.out.println("\t\t\t\t\t\t\t\t\t\tEnter your password");
+        System.out.println("\t\t\t\t\t\t\t\t\t\tEnter your Password");
         String inputPassword = sc.next();
         if (inputUsername.equals("admin") && inputPassword.equals("admin")) {
             System.out.println("login successfully");

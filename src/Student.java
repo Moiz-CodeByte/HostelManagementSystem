@@ -51,9 +51,9 @@ public class Student extends Person {
         long JoiningDate = sc.nextLong();
 
         System.out.println("Enter room number [int type]");
-       int RoomNO = sc.nextInt();
+        int RoomNO = sc.nextInt();
         System.out.println("Enter rent  [double type] ");
-        double Rent= sc.nextInt();
+         double Rent= sc.nextDouble();
         sc.nextLine();
 
         Student student = new Student(name, ID,PhoneNo,JoiningDate, Address, RoomNO, Rent);
@@ -65,7 +65,7 @@ public class Student extends Person {
 
     public void deleteStudent() {
         System.out.println("Enter the CNIC ID number of the student to remove:");
-        int ID = sc.nextInt();
+        long ID = sc.nextLong();
         for (int i = 0; i < Studentcount; i++) {
             if (studentsList[i].getID() == ID) {
                 System.out.println("Student deleted successfully:");
@@ -91,7 +91,7 @@ public class Student extends Person {
 
     public void updateStudent() {
         System.out.println("Enter the CNIC ID number of the student to update:");
-        int ID = sc.nextInt();
+        long ID = sc.nextLong();
         for (int i = 0; i < Studentcount; i++) {
             if (studentsList[i].getID() == ID) {
 
@@ -100,11 +100,11 @@ public class Student extends Person {
                 studentsList[i].setRoomNo(newRoomNumber);
 
                 System.out.println("Enter new Phone Number for " + studentsList[i].getname() + ":");
-                long newPhoneNo = sc.nextInt();
+                long newPhoneNo = sc.nextLong();
                 studentsList[i].setPhoneNo(newPhoneNo);
 
                 System.out.println("Enter new Rent for " + studentsList[i].getname() + ":");
-                double Rent  = sc.nextInt();
+                double Rent  = sc.nextDouble();
                 studentsList[i].setRent(Rent);
                 System.out.println("Student information updated successfully.");
                 return;
@@ -115,7 +115,7 @@ public class Student extends Person {
 
     public void searchStudent() {
         System.out.println("Enter the CNIC ID of the student to search for:");
-        long ID = sc.nextInt();
+        long ID = sc.nextLong();
         for (int i = 0; i < Studentcount; i++) {
             if (studentsList[i].getID() == ID) {
                 System.out.println("Student found! Name: " + studentsList[i].getname()+
@@ -137,14 +137,14 @@ public class Student extends Person {
             System.out.println("No students found \n" );
             return;
         }
-        System.out.println("List of all students:");
+        System.out.println("List of all students:\n");
         for (int i = 0; i < Studentcount; i++) {
             System.out.println((i+1)+". Name: " + studentsList[i].getname()+
                     ", ID  : " + studentsList[i].getID() +
                             ", Phone Number : " + studentsList[i].getPhoneNo()+
                             ", Address : " + studentsList[i].getAddress()+
                     ", Room Number: " + studentsList[i].getRoomNo() + ", Rent: "+ studentsList[i].getRent()
-                    +" joining date: "+studentsList[i].getJoiningDate() +"\n");
+                    +", joining date: "+studentsList[i].getJoiningDate() +"\n");
         }
 }
 

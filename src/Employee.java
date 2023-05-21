@@ -51,7 +51,7 @@ public class Employee extends Person {
         long PhoneNo = sc.nextLong();
 
         System.out.println("Enter Salary [double type] ");
-        double Salary = sc.nextInt();
+        double Salary = sc.nextDouble();
 
         sc.nextLine(); // To create empty new line
 
@@ -64,7 +64,7 @@ public class Employee extends Person {
 
     public void deleteEmployee() {
         System.out.println("Enter the CNIC ID number of the Employee to remove:");
-        int ID = sc.nextInt();
+       long ID = sc.nextLong();
         for (int i = 0; i < Employeecount; i++) {
             if (EmployeeList[i].getID() == ID) {
                 System.out.println("Employee deleted successfully:");
@@ -88,19 +88,19 @@ public class Employee extends Person {
 
     public void updateEmploye() {
         System.out.println("Enter the CNIC ID number of the Employee to update:");
-        int ID = sc.nextInt();
+         long ID = sc.nextLong();
         for (int i = 0; i < Employeecount; i++) {
             if (EmployeeList[i].getID() == ID) {
                 System.out.println("Enter new Role for " + EmployeeList[i].getname() + ":");
-                String Role  = sc.nextLine();
-                EmployeeList[i].setRole(Role);
+                String newRole  = sc.nextLine();
+                EmployeeList[i].setRole(newRole);
 
                 System.out.println("Enter new Salary for " + EmployeeList[i].getname() + ":");
-                double newSalary = sc.nextInt();
+                double newSalary = sc.nextDouble();
                 EmployeeList[i].setSalary(newSalary);
 
                 System.out.println("Enter new Phone Number for " + EmployeeList[i].getname() + ":");
-                long newPhoneNo = sc.nextInt();
+                long newPhoneNo = sc.nextLong();
                 EmployeeList[i].setPhoneNo(newPhoneNo);
 
 

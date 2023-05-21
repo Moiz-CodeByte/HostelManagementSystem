@@ -48,6 +48,10 @@ public class Expenditure {
     }
 
     public void DisplayExpenses() {
+        if (numExpenses == 0) {
+            System.out.println("No expense added \n" );
+            return;
+        }
         System.out.println("List of expenses:");
         for (int i = 0; i < numExpenses; i++) {
             System.out.println((i + 1) + "."+" Name: "+ expensesList[i].getExpenseName() +
