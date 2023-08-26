@@ -1,7 +1,7 @@
 
 # Hostel Management System
 
-This project is a Hostel Management System implemented in Java using Object-Oriented Programming (OOP) concepts. The system allows you to manage hostelites (students), employees, and expenditure related to the hostel. It provides a menu-driven interface for various management operations.
+This project is a Hostel Management System implemented in Java using Object-Oriented Programming (OOP) concepts. The system allows you to manage hostelites (students), employees, and expenditures related to the hostel. It provides a menu-driven interface for various management operations.
 
 ## Features
 
@@ -74,12 +74,6 @@ This project is a basic implementation of a Hostel Management System. It serves 
 
 ## Author
 
-[Your Name]
+Abdul Moiz
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to customize this README file to include your project-specific details and additional sections as needed. Good luck with your project!
